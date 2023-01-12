@@ -1,0 +1,14 @@
+.table-div {
+  text-align: center;
+}
+
+table {
+  width: 70%;
+  margin: 30px auto;
+}
+
+th,
+td {
+  border-bottom: 1px solid #ddd;
+  height: 50px;
+}
