@@ -1,7 +1,9 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import MyTable from "../components/Table";
-import QuotesService from "../services/quotes.service";
+import NavBar from "../../components/NavBar/NavBar";
+import MyTable from "../../components/Table/Table";
+import QuotesService from "../../services/quotes.service";
+import { Content } from "./main.style";
 
 const service = new QuotesService();
 
@@ -17,9 +19,10 @@ function Main() {
 
   return (
     <div>
-      <div className="content">
+      <NavBar />
+      <Content>
         <MyTable quotes={quotes} />
-      </div>
+      </Content>
     </div>
   );
 }

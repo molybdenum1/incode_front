@@ -1,17 +1,17 @@
-import TableRow from "./TableRow";
-import "./table.css";
+import TableRow from "../TableRow/TableRow";
+import { Table, TH } from "./table.style";
 
 function MyTable({ quotes }) {
   return (
     <div className="table-div">
-      <table className="table" striped bordered hover variant="dark">
+      <Table className="table" striped bordered hover variant="dark">
         <thead>
           <tr>
-            <th>Tickers</th>
-            <th>Price</th>
-            <th>Change</th>
-            <th>Exchange</th>
-            <th>dividend</th>
+            <TH>Tickers</TH>
+            <TH>Price</TH>
+            <TH>Change</TH>
+            <TH>Exchange</TH>
+            <TH>dividend</TH>
           </tr>
         </thead>
         <tbody>
@@ -20,7 +20,7 @@ function MyTable({ quotes }) {
               <TableRow key={quote.ticker} quote={quote} />
             ))}
         </tbody>
-      </table>
+      </Table>
     </div>
   );
 }
